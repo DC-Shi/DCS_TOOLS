@@ -1,3 +1,8 @@
+# This script is used for verifying your certificate expired or not.
+# the cert is generated using pki (ipsec pki) command
+#
+# Requirements: openssl, sed
+
 # echo with DEBUG set
 debugecho()
 {
