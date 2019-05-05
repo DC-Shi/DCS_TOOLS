@@ -1,0 +1,14 @@
+#!/bin/bash
+# Require DCS_TOOLS for functioning.
+
+if [ -z "${DCS_TOOLS}" ]
+then
+  echo Cannot find var: DCS_TOOLS !
+  echo Please run sudo visudo to add following line:
+  echo Defaults env_keep += "DCS_TOOLS"
+else
+  echo "hah, your setup seems good"
+  [[ "$UID" -eq "0" ]] \
+    && echo "Script running under root" \
+    || echo "Script running in normal user"
+fi

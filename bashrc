@@ -12,3 +12,7 @@ export HISTTIMEFORMAT="%FT%T%z%t"
 
 # Add custom commands to search path
 export PATH=${DCS_TOOLS}/CustomCommand:$PATH
+
+# Add return status
+PS1+="\$(echo -e \$?) "
+
